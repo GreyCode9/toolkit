@@ -1,10 +1,10 @@
 package top.mjava.desensitization;
 
 /**
- * 脱敏方法
- * @author zheng
- * @date 2020-07-07
- */
+ * @Author zmh
+ * @Date 2020/7/7
+ * @Version 1.0
+ **/
 public class Desensitization {
 
     public String type(String type,String value){

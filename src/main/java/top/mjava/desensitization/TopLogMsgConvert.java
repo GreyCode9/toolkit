@@ -19,12 +19,10 @@ import java.util.Properties;
 
 
 /**
- *
- * logback 日志脱敏消息转换类
- * @author zheng
- * @date 2020-07-07
- *
- */
+ * @Author zmh
+ * @Date 2020/7/7
+ * @Version 1.0
+ **/
 public class TopLogMsgConvert extends MessageConverter {
     private Map<String, LinkedList<String>> relusMap;
     private boolean init = false;

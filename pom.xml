@@ -10,7 +10,7 @@
     </parent>
     <groupId>top.mjava</groupId>
     <artifactId>toolkit</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.2-RELEASE</version>
     <name>toolkit</name>
     <description>Demo project for Spring Boot</description>
 
@@ -29,23 +29,6 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.70</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.slf4j</groupId>-->
-<!--            <artifactId>slf4j-api</artifactId>-->
-<!--            <version>1.7.30</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>ch.qos.logback</groupId>-->
-<!--            <artifactId>logback-core</artifactId>-->
-<!--            <version>1.2.3</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>ch.qos.logback</groupId>-->
-<!--            <artifactId>logback-classic</artifactId>-->
-<!--            <version>1.2.3</version>-->
-<!--        </dependency>-->
-
-
     </dependencies>
 
     <build>
@@ -72,5 +55,16 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/102997-release-dTwmzu/</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/102997-snapshot-d0gx8B/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
