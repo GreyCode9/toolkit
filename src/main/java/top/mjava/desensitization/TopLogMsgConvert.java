@@ -145,13 +145,14 @@ public class TopLogMsgConvert extends MessageConverter {
                         "}".equals(jsonString.substring(jsonString.length()-1))){
                     try {
                         JSONObject arg= JSON.parseObject(jsonString);
-                        LinkedList<String> l=new LinkedList<>();
+                        LinkedList<String> list=null;
                         for (String k:relusMap.keySet()){
                             String[] k2=k.split(MAP_KEY_DELIMITER);
+                            list=new LinkedList<>(relusMap.get(k));
                             if (k2.length==1){
-                                this.jsonDesensitization(arg,relusMap.get(k),"default");
+                                this.jsonDesensitization(arg,list,"default");
                             }else if (k2.length==2){
-                                this.jsonDesensitization(arg,relusMap.get(k),k2[1]);
+                                this.jsonDesensitization(arg,list,k2[1]);
                             }
                         }
                         args[i]=arg;
