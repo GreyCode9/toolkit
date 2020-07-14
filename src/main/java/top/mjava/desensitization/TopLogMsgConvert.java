@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.helpers.MessageFormatter;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.ResourceUtils;
 
 import java.io.BufferedInputStream;
@@ -62,8 +63,11 @@ public class TopLogMsgConvert extends MessageConverter {
         synchronized (TopLogMsgConvert.class) {
             this.relusMap = new HashMap<>();
             try {
-                File file=ResourceUtils.getFile(CONFIG_PATH);
-                InputStream in = new BufferedInputStream(new FileInputStream(file));
+//                File file=ResourceUtils.getFile(CONFIG_PATH);
+//                InputStream in = new BufferedInputStream(new FileInputStream(file));
+                ClassPathResource resource = new ClassPathResource("static/excel/userTemplate.xlsx");
+                resource.getInputStream();
+                InputStream in=resource.getInputStream();
                 Properties p = new Properties();
                 p.load(in);
                 int keyNum=0;
