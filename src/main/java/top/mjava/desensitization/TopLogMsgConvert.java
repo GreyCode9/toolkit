@@ -65,7 +65,7 @@ public class TopLogMsgConvert extends MessageConverter {
             try {
 //                File file=ResourceUtils.getFile(CONFIG_PATH);
 //                InputStream in = new BufferedInputStream(new FileInputStream(file));
-                ClassPathResource resource = new ClassPathResource("static/excel/userTemplate.xlsx");
+                ClassPathResource resource = new ClassPathResource(CONFIG_PATH);
                 resource.getInputStream();
                 InputStream in=resource.getInputStream();
                 Properties p = new Properties();

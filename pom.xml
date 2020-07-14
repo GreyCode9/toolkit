@@ -10,7 +10,7 @@
     </parent>
     <groupId>top.mjava</groupId>
     <artifactId>toolkit</artifactId>
-    <version>0.0.2-RELEASE</version>
+    <version>0.0.5-RELEASE</version>
     <name>toolkit</name>
     <description>Demo project for Spring Boot</description>
 
@@ -56,15 +56,22 @@
         </plugins>
     </build>
 
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>rdc-releases</id>-->
+<!--            <url>https://repo.rdc.aliyun.com/repository/102997-release-dTwmzu/</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>rdc-snapshots</id>-->
+<!--            <url>https://repo.rdc.aliyun.com/repository/102997-snapshot-d0gx8B/</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
     <distributionManagement>
         <repository>
-            <id>rdc-releases</id>
-            <url>https://repo.rdc.aliyun.com/repository/102997-release-dTwmzu/</url>
+            <id>sunline-tiny</id>
+            <name>Releases</name>
+            <url>http://p.mtiny.cn:8099/repository/public/</url>
         </repository>
-        <snapshotRepository>
-            <id>rdc-snapshots</id>
-            <url>https://repo.rdc.aliyun.com/repository/102997-snapshot-d0gx8B/</url>
-        </snapshotRepository>
     </distributionManagement>
 
 </project>
