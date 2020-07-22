@@ -21,11 +21,9 @@ jobs:
 
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.3
-      with:
-        # Set the sonar.projectBaseDir analysis property
-        projectBaseDir: . # optional, default is .
       env:
         GITHUB_TOKEN: ${{ github.token }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         
     - name: Build with Maven
       run: mvn -B package --file pom.xml
