@@ -22,3 +22,5 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: deploy
+      run: mvn deploy -Dregistry=https://maven.pkg.github.com/GreyCode9 -Dtoken=${{ secrets.GITHUB_TOKEN }}
