@@ -66,12 +66,19 @@
 <!--            <url>https://repo.rdc.aliyun.com/repository/102997-snapshot-d0gx8B/</url>-->
 <!--        </snapshotRepository>-->
 <!--    </distributionManagement>-->
-    <distributionManagement>
+<!--     <distributionManagement>
         <repository>
             <id>sunline-tiny</id>
             <name>Releases</name>
             <url>http://p.mtiny.cn:8099/repository/public/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement> -->
+         <distributionManagement>
+            <repository>
+              <id>github</id>
+              <name>GitHub OWNER Apache Maven Packages</name>
+              <url>https://maven.pkg.github.com/GreyCode9/toolkit</url>
+            </repository>
+         </distributionManagement>
 
 </project>
