@@ -14,7 +14,7 @@ import java.util.Map;
 public class BaseConversionUtils {
     private static final char[] BASE_64_ARRAY = { 'z','x','c','v','b','n','m','a','s','d','f','g','h','j','k','l','q','w',
     'e','r','t','y','u','i','o','p','1','2','3','4','5','6','-','7','8','9','Z','X','C','V','B','N','M','A','S','D','F',
-    'G','H','J','K','L','Q','W','E','R','T','Y','U','I','O','P','0'};
+    'G','H','J','K','L','Q','W','E','R','T','Y','U','I','O','P','0','+'};
 
     /**
      * 10进制转64进制
