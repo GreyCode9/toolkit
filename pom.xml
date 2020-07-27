@@ -10,7 +10,7 @@
     </parent>
     <groupId>top.mjava</groupId>
     <artifactId>toolkit</artifactId>
-    <version>0.0.5-RELEASE</version>
+    <version>0.0.7-RELEASE</version>
     <name>toolkit</name>
     <description>Demo project for Spring Boot</description>
 
