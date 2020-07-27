@@ -19,7 +19,7 @@ public class BaseConversionUtils {
     /**
      * 10进制转64进制
      * */
-    public String base64ToBase10(Long l){
+    public static String base64ToBase10(Long l){
         Long l1=l;
         long y;
         StringBuilder result=new StringBuilder();
@@ -42,7 +42,7 @@ public class BaseConversionUtils {
     /**
      * 64进制转10进制
      * */
-    public Long base10ToBase64(String s){
+    public static Long base10ToBase64(String s){
         char[] c=s.toCharArray();
         long result=0;
         // 将字典哈希
