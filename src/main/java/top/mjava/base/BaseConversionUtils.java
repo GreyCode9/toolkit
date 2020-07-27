@@ -19,8 +19,8 @@ public class BaseConversionUtils {
     /**
      * 10进制转64进制
      * */
-    public static String base64ToBase10(Long l){
-        Long l1=l;
+    public static String base10ToBase64(Long val){
+        Long l1=val;
         long y;
         StringBuilder result=new StringBuilder();
         // 这里用到了linkedList的先进后出
@@ -42,8 +42,8 @@ public class BaseConversionUtils {
     /**
      * 64进制转10进制
      * */
-    public static Long base10ToBase64(String s){
-        char[] c=s.toCharArray();
+    public static Long base64ToBase10(String val){
+        char[] c=val.toCharArray();
         long result=0;
         // 将字典哈希
         Map<Character,Integer> map=new HashMap<>();
