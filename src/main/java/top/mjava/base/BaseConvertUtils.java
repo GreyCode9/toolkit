@@ -74,7 +74,7 @@ public class BaseConvertUtils {
     /**
      * 10进制转16进制
      * */
-    public String base10ToHex(Long val){
+    public static String base10ToHex(Long val){
         long n=val;
         long y=0;
         StringBuilder result=new StringBuilder();
@@ -94,7 +94,7 @@ public class BaseConvertUtils {
     /**
      * 16进制转10进制
      * */
-    public Long hexToBase10(String val){
+    public static Long hexToBase10(String val){
         long result=0;
         char[] c=val.toCharArray();
         Map<Character,Integer> map=new HashMap<>();
@@ -110,7 +110,7 @@ public class BaseConvertUtils {
     /**
      * 10进制转32进制
      * */
-    public String base10ToBase32(Long val){
+    public static String base10ToBase32(Long val){
         long n=val;
         long y=0L;
         StringBuilder result=new StringBuilder();
@@ -130,7 +130,7 @@ public class BaseConvertUtils {
     /**
      * 32进制转10进制
      * */
-    public Long base32ToBase10(String val){
+    public static Long base32ToBase10(String val){
         long result=0L;
         char[] c=val.toCharArray();
         Map<Character,Integer> map=new HashMap<>();
