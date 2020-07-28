@@ -12,7 +12,7 @@
 <dependency>
     <groupId>top.mjava</groupId>
     <artifactId>toolkit</artifactId>
-    <version>0.0.11-RELEASE</version>
+    <version>0.0.12-RELEASE</version>
 </dependency>
 ```
 
@@ -63,4 +63,11 @@ String base_64=BaseConvertUtils.base10ToBase64(Long val);
 **2. 64进制转10进制:**
 ```java
 Long base_10=BaseConvertUtils.base64ToBase10(String val);
+```
+
+## 小工具
+### Ip工具
+- 获取真实ip地址：
+```java
+String ip=IpUtils.getIpAddress(HttpServletRequest request);
 ```
