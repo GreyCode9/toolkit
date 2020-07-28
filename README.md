@@ -4,6 +4,7 @@
 ![](https://img.shields.io/badge/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2-BaseConversion-green) 
 ![](https://img.shields.io/badge/%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95-SnowFlake-blue)
 
+[中文文档](https://github.com/GreyCode9/toolkit/blob/master/Readme-zh.md)
 ## Quick start
 **maven:**
 ```xml
@@ -14,7 +15,7 @@
 </dependency>
 ```
 
-## Logbcak log desensitization
+## Log masking plugin
 **1. Add conversionRule to `logback.xml`**
 > Note: put in front of appender
 ```xml
@@ -57,13 +58,13 @@ desensitization_class_path=com.example.logtest.MyDe
 
 ```
 ## Base Conversion
-**Base-10 to Base-64:**
-> After using this tool to convert to 64 hexadecimal, you can only use this tool to restore
+**1. Base-10 to Base-64:**
+> After using this tool to convert to Base-64, you can only use this tool to restore
 ```java
 String base_64=BaseConvertUtils.base10ToBase64(Long val);
 ```
 
-**Base-64 to Base-10:**
+**2. Base-64 to Base-10:**
 ```java
 Long base_10=BaseConvertUtils.base64ToBase10(String val);
 ```
