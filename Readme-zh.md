@@ -54,7 +54,6 @@ desensitization_class_path=com.example.logtest.MyDe
 ```
 
 ## 进制转换
-> 使用此工具转换为64进制后，您只能使用此工具进行还原
 
 **1. 10进制转64进制:**
 ```java
@@ -64,7 +63,22 @@ String base_64=BaseConvertUtils.base10ToBase64(Long val);
 ```java
 Long base_10=BaseConvertUtils.base64ToBase10(String val);
 ```
-
+**3. 10进制转32进制（去除：I,L,O,U）：**
+```java
+String base_32=BaseConvertUtils.base10ToBase32(Long val)
+```
+**4. 32进制转10进制（去除：I,L,O,U）:**
+```java
+Long base_10=BaseConvertUtils.base32ToBase10(String val);
+```
+**5. 10进制转16进制：**
+```java
+String base_16=BaseConvertUtils.base10ToHex(Long val);
+```
+**6. 16进制转10进制：**
+```java
+Long base_10=BaseConvertUtils.hexToBase10(String val)
+```
 ## 小工具
 ### Ip工具
 - 获取真实ip地址：

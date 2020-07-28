@@ -59,7 +59,6 @@ desensitization_class_path=com.example.logtest.MyDe
 ```
 ## Base Conversion
 **1. Base-10 to Base-64:**
-> After using this tool to convert to Base-64, you can only use this tool to restore
 ```java
 String base_64=BaseConvertUtils.base10ToBase64(Long val);
 ```
@@ -68,7 +67,22 @@ String base_64=BaseConvertUtils.base10ToBase64(Long val);
 ```java
 Long base_10=BaseConvertUtils.base64ToBase10(String val);
 ```
-
+**3. Base-10 to Base-32 (removal: I, L, O, U)：**
+```java
+String base_32=BaseConvertUtils.base10ToBase32(Long val)
+```
+**4. Base-32 to Base-10 (remove: I, L, O, U):**
+```java
+Long base_10=BaseConvertUtils.base32ToBase10(String val);
+```
+**5. Base-10 to hexadecimal：**
+```java
+String base_16=BaseConvertUtils.base10ToHex(Long val);
+```
+**6. Hexadecimal to Base-10：**
+```java
+Long base_10=BaseConvertUtils.hexToBase10(String val)
+```
 ## Tools
 ### Ip Tool
 - Get real ip address：
