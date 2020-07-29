@@ -14,11 +14,24 @@ import java.util.Map;
  * @date 2020/7/27
  **/
 public class BaseConvertUtils {
+    private final static int BASE_2_POWER=1;
     private final static int BASE_16_POWER=4;
     private final static int BASE_32_POWER=5;
     private final static int BASE_64_POWER=6;
 
 
+    /**
+     * 10进制转2进制
+     * */
+    public static String base10ToBase2(Long val){
+        return base10ToAll(val,BaseDictionary.BASE_2_ARRAY.getChars(),BASE_2_POWER);
+    }
+    /**
+     * 2进制转10进制
+     * */
+    public static Long base2ToBase10(String val){
+        return allToBase10(val,BaseDictionary.BASE_2_ARRAY.getChars(),BASE_2_POWER);
+    }
 
     /**
      * 10进制转16进制
@@ -62,6 +75,14 @@ public class BaseConvertUtils {
         return allToBase10(val,BaseDictionary.BASE_64_URL_ARRAY.getChars(),BASE_64_POWER);
     }
 
+    /**
+     * 转10进制通用方法
+     *
+     * @param val 需要转的数据
+     * @param chars 进制字典 {@link BaseDictionary}
+     * @param power 2的幂 eg:64进制是2的6次方  所以 power=5
+     * @return 10进制的结果
+     * */
     private static Long allToBase10(String val,char[] chars,int power){
         long result=0L;
         char[] c=val.toCharArray();
@@ -78,6 +99,14 @@ public class BaseConvertUtils {
         return result;
     }
 
+    /**
+     * 10进制转其他进制通用方法
+     *
+     * @param val 需要转的数据
+     * @param chars 进制字典 {@link BaseDictionary}
+     * @param power 2的幂 eg:64进制是2的6次方  所以 power=5
+     * @return 进制转换的结果
+     * */
     private static String base10ToAll(Long val,char[] chars,int power){
         Long l1=val;
         long y;
@@ -98,15 +127,4 @@ public class BaseConvertUtils {
         return result.toString();
     }
 
-    @Test
-    public void test(){
-        System.out.println(base10ToBase64(6644422222L));
-        System.out.println(base64ToBase10(base10ToBase64(6644422222L)));
-
-        System.out.println(base10ToBase32(123123123445567L));
-        System.out.println(base32ToBase10(base10ToBase32(123123123445567L)));
-
-        System.out.println(base10ToHex(9898989887L));
-        System.out.println(hexToBase10(base10ToHex(9898989887L)));
-    }
 }

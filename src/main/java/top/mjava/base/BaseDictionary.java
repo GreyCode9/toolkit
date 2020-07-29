@@ -7,6 +7,7 @@ package top.mjava.base;
  * @date 2020/7/29
  **/
 public enum BaseDictionary {
+    BASE_2_ARRAY("2进制","2进制字典",new char[]{'0','1'}),
 
     BASE_64_ARRAY("64进制","64进制乱序字典",new char[]{'z','x','c','v','b','n','m','a','s','d','f','g','h','j','k','l','q','w',
             'e','r','t','y','u','i','o','p','1','2','3','4','5','6','-','7','8','9','Z','X','C','V','B','N','M','A','S','D','F',
